@@ -23,6 +23,14 @@ app.get('/all', (req, res) => {
     }
 )
 
+
+app.get('/checkouts/:id', (req, res) => {
+        const id = req.params.id
+        const checkouts = courseDetails.find(course => course.category_id === id) 
+        res.send(checkouts)
+    }
+)
+
 app.get('/category/:id', (req, res) => {
     const id = req.params.id;
     if (id === '07') {
@@ -40,6 +48,8 @@ app.get('/details/:id', (req, res) => {
     const selectedcourse = courseDetails.find(course => course._id === id)
     res.send(selectedcourse)
 })
+
+
 
 
 // app.get('/details/:id', (req, res)=>{
