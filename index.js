@@ -51,13 +51,6 @@ app.get('/details/:id', (req, res) => {
 
 
 
-
-// app.get('/details/:id', (req, res)=>{
-//     const id = req.params.id;
-//     const selectedCourse = courseDetails.find(course => course.id === id);
-//     res.send(selectedCourse)
-// })
-
 app.listen(port, () => {
     console.log('course running on port', port)
 })
